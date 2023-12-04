@@ -1,2 +1,2 @@
 # file-renamer
- Renomeador de arquivos em Python / File renamer in Python
+ Renomeador de arquivos usando Python (em desenvolvimento).
