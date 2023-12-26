@@ -4,12 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>File Renamer</title>
+
+  <link rel="stylesheet" href="../static/main.css">
+  <link rel="stylesheet" href="../static/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <form action="/newName" method="post" id="textForm">
-    <label for="fileName">Nome atual do arquivo:</label>
-    <input type="text" name="fileName">
-    <button type="submit">Renomear</button>
-  </form>
+  <main>
+    <h1>Renomeie seu arquivo</h1>
+    <form action="/newName" method="post" id="textForm">
+      <label for="fileName">Nome atual do arquivo:</label>
+      <input type="text" name="fileName" placeholder="Cole aqui...">
+      <button type="submit">Renomear arquivo</button>
+    </form>
+  </main>
 </body>
 </html>
