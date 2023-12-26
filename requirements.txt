@@ -43,4 +43,4 @@ tornado==6.3.3
 traitlets==5.9.0
 tzdata==2023.3
 wcwidth==0.2.6
-pywin32==301
+pywin32==223
