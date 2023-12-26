@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Renamer - New Name</title>
+  
+  <link rel="stylesheet" href="../static/main.css">
+  <link rel="stylesheet" href="../static/newName.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1>Arquivo renomeado!</h1>
+    <input type="text" id="newName" value={{ newName }} readonly>
+    <button id="buttonCopy" onclick="copy()">Copiar nome</button>
+    <form action="/" method="post">
+      <button id="buttonReturn" type="submit">Renomear outro arquivo</button>
+    </form>
+  </main>
+
+  <script>
+    function copy() {
+      document.querySelector("#newName").select();
+      document.execCommand("copy");
+      const button = document.querySelector("#buttonCopy");
+      button.textContent = "Copiado!";
+    }
+  </script>
+</body>
+</html>
