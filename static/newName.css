@@ -1,0 +1,22 @@
+input {
+  width: 100%;
+  max-width: 450px;
+}
+
+button {
+  margin-top: 8px;
+}
+
+#buttonCopy {
+  width: 100%;
+  max-width: 450px;
+  color: #ffffff;
+  background: #0ce826;
+}
+
+#buttonReturn {
+  width: 100%;
+  max-width: 450px;
+  color: #ffffff;
+  background: #0C46E8;
+}
