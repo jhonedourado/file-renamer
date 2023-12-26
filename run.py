@@ -4,6 +4,7 @@ from app.main import rename
 app = Flask(__name__)
 
 @app.route("/")
+@app.route("/", methods=["POST"])
 def index():
   return render_template("index.html")
 
@@ -11,4 +12,4 @@ def index():
 def newName():
   fileName = request.form.get("fileName")
   newName = rename(fileName)
-  return newName
+  return render_template("newName.html", newName=newName)
