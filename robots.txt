@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://file-renamer-ytp8.onrender.com/sitemap.xml
