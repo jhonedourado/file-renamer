@@ -25,15 +25,25 @@
 
   <main>
     <h1>Renomeie seu arquivo</h1>
+
     <form action="/newName" method="post" id="textForm">
       <label for="fileName">Nome atual do arquivo:</label>
       <input type="text" name="fileName" placeholder="Cole aqui...">
       <button type="submit">Renomear arquivo</button>
     </form>
+
+    <button class="message" onclick="openMessage()">Saiba que...</button>
   </main>
 
   <footer>
     <p>Desenvolvido por <a href="https://github.com/jhonedourado" target="_blank">Jhone Dourado</a></p>
   </footer>
+
+  <script>
+    function openMessage() {
+      const buttonMessage = document.querySelector(".message");
+      buttonMessage.textContent = "Jesus te ama!";
+    }
+  </script>
 </body>
 </html>

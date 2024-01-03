@@ -17,11 +17,14 @@
   
   <main>
     <h1>Arquivo renomeado!</h1>
+
     <input type="text" id="newName" value={{ newName }} readonly>
     <button id="buttonCopy" onclick="copy()">Copiar nome</button>
     <form action="/" method="post">
       <button id="buttonReturn" type="submit">Renomear outro arquivo</button>
     </form>
+
+    <button class="message" onclick="openMessage()">Saiba que...</button>
   </main>
 
   <footer>
@@ -34,6 +37,11 @@
       document.execCommand("copy");
       const button = document.querySelector("#buttonCopy");
       button.textContent = "Copiado!";
+    }
+
+    function openMessage() {
+      const buttonMessage = document.querySelector(".message");
+      buttonMessage.textContent = "Jesus te ama!";
     }
   </script>
 </body>
