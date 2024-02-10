@@ -8,8 +8,8 @@ app = Flask(__name__)
 def index():
   return render_template("index.html")
 
-@app.route("/newName", methods=["POST"])
-def newName():
-  fileName = request.form.get("fileName")
-  newName = rename(fileName)
-  return render_template("newName.html", newName=newName)
+@app.route("/new-name", methods=["POST"])
+def new_name():
+  file_name = request.form.get("file-name")
+  new_name = rename(file_name)
+  return render_template("new-name.html", new_name=new_name)

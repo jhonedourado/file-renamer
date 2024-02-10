@@ -1,5 +1,7 @@
 punctuation = """!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
+
 vowels = ["a", "e", "i", "o", "u"]
+
 accentuation = [
   ["á", "â"], 
   ["é", "ê"], 
@@ -10,9 +12,9 @@ accentuation = [
 
 def rename(name:str):
   name = name.lower()
-  return removePunctuation(name)
+  return remove_punctuation(name)
 
-def removePunctuation(name:str):
+def remove_punctuation(name:str):
   name = name.replace("ç", "c")
   name = name.replace("à", "a")
   name = name.replace("ã", "a")
@@ -25,15 +27,15 @@ def removePunctuation(name:str):
   for i in range(5):
     for j in range(2):
       name = name.replace(accentuation[i][j], vowels[i])
-  return transformVector(name)
+  return transform_vector(name)
 
-def transformVector(name:str):
+def transform_vector(name:str):
   name = name.split()
   return rewrite(name)
 
 def rewrite(name:list):
-  newName = ""
+  new_name = ""
   for i in range(len(name)):
-    newName += name[i] + "-"
-  newName = newName[:-1]
-  return newName
+    new_name += name[i] + "-"
+  new_name = new_name[:-1]
+  return new_name
