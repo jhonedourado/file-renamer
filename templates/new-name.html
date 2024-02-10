@@ -6,43 +6,58 @@
   
   <title>File Renamer - New Name</title>
   
-  <link rel="stylesheet" href="../static/main.css">
-  <link rel="stylesheet" href="../static/newName.css">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="../static/css/new-name.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header></header>
-  
-  <main>
+  <div class="container">
     <h1>Arquivo renomeado!</h1>
 
-    <input type="text" id="newName" value={{ new_name }} readonly>
-    <button id="buttonCopy" onclick="copy()">Copiar nome</button>
+    <div class="new-name-box">
+      <input type="text" id="new-name" value={{ new_name }} readonly>
+      <button id="button-copy" onclick="copy()"><img src="../static/img/copy.svg" alt="Copiar" title="Copiar"></button>
+      <small class="alert">Copiado!</small>
+    </div>
+
     <form action="/" method="post">
-      <button id="buttonReturn" type="submit">Renomear outro arquivo</button>
+      <button type="submit">RENOMEAR OUTRO ARQUIVO</button>
     </form>
 
-    <button class="message" onclick="openMessage()">Saiba que...</button>
-  </main>
+    <div class="informations">
+      <div class="buttons">
+        <button class="button-github"><a href="https://github.com/jhonedourado" target="_blank"><img src="../static/img/github.svg" alt="GitHub do desenvolvedor" title="GitHub do desenvolvedor"></a></button>
+        <button class="button-message"><img src="../static/img/notification.svg" alt="Uma mensagem para você" title="Uma mensagem para você"></button>
+      </div>
 
-  <footer>
-    <p>Desenvolvido por <a href="https://github.com/jhonedourado" target="_blank">Jhone Dourado</a></p>
-  </footer>
+      <div class="message">
+        <div class="message-box">
+          <img src="../static/img/balloon.svg" alt="Jesus te ama!" title="Jesus te ama!">
+          <p>Jesus te ama!</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
     function copy() {
-      document.querySelector("#newName").select();
+      document.querySelector("#new-name").select();
       document.execCommand("copy");
-      const button = document.querySelector("#buttonCopy");
-      button.textContent = "Copiado!";
     }
+  </script>
 
-    function openMessage() {
-      const buttonMessage = document.querySelector(".message");
-      buttonMessage.textContent = "Jesus te ama!";
-    }
+  <script>
+    $("#button-copy").on("click", function() {
+      $(".alert").fadeIn("slow");
+    });
+
+    $(".button-message").on("click", function() {
+      $(".message").fadeToggle("slow");
+    });
   </script>
 </body>
 </html>

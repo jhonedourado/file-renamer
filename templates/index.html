@@ -14,11 +14,13 @@
   <meta property="og:title" content="File Renamer">
   <meta property="og:description" content="Ferramenta online e gratuita para renomear seus arquivos com facilidade e rapidez.">
 
-  <link rel="stylesheet" href="../static/main.css">
-  <link rel="stylesheet" href="../static/home.css">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="../static/css/home.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXM1RKZ8X6"></script>
@@ -31,29 +33,34 @@
   </script>
 </head>
 <body>
-  <header></header>
-
-  <main>
+  <div class="container">
     <h1>Renomeie seu arquivo</h1>
+    <p>Cole o nome atual do seu arquivo no campo abaixo e clique em “RENOMEAR” para ter seu novo nome no padrão “example-file-name”.</p>
 
-    <form action="/new-name" method="post" id="textForm">
-      <label for="file-name">Nome atual do arquivo:</label>
-      <input type="text" name="file-name" placeholder="Cole aqui..." required>
-      <button type="submit">Renomear arquivo</button>
+    <form action="/new-name" method="post">
+      <input type="text" name="file-name" placeholder="Cole aqui o nome atual do arquivo..." required>
+      <button type="submit">RENOMEAR</button>
     </form>
 
-    <button class="message" onclick="openMessage()">Saiba que...</button>
-  </main>
+    <div class="informations">
+      <div class="buttons">
+        <button class="button-github"><a href="https://github.com/jhonedourado" target="_blank"><img src="../static/img/github.svg" alt="GitHub do desenvolvedor" title="GitHub do desenvolvedor"></a></button>
+        <button class="button-message"><img src="../static/img/notification.svg" alt="Uma mensagem para você" title="Uma mensagem para você"></button>
+      </div>
 
-  <footer>
-    <p>Desenvolvido por <a href="https://github.com/jhonedourado" target="_blank">Jhone Dourado</a></p>
-  </footer>
+      <div class="message">
+        <div class="message-box">
+          <img src="../static/img/balloon.svg" alt="Jesus te ama!" title="Jesus te ama!">
+          <p>Jesus te ama!</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
-    function openMessage() {
-      const buttonMessage = document.querySelector(".message");
-      buttonMessage.textContent = "Jesus te ama!";
-    }
+    $(".button-message").on("click", function() {
+      $(".message").fadeToggle("slow");
+    });
   </script>
 </body>
 </html>

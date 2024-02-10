@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: #2A334D;
+  --secondary-color: #0A3ECC;
+  --white-color: #FFFFFF;
+
+  --font-scale-h1: 40px;
+  --font-scale-p: 16px;
+  --font-scale-small: 14px;
+
+  --hover-efect: brightness(.9);
+  --click-efect: brightness(.8);
+  --transition: 200ms;
+
+  font-size: 62.5%;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 668px;
+  height: 100%;
+}
+
+.container h1 {
+  width: 100%;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+  font-size: var(--font-scale-h1);
+  text-align: center;
+}
+
+.container p {
+  width: 100%;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+  font-size: var(--font-scale-p);
+  text-align: center;
+}
+
+form button {
+  padding: 16px;
+  color: var(--white-color);
+  background: var(--secondary-color);
+  font-weight: bold;
+}
+
+form button:hover {
+  filter: var(--hover-efect);
+}
+
+form button:active {
+  filter: var(--click-efect);
+}
+
+input {
+  padding: 16px;
+  color: var(--primary-color);
+  background: #2a334d20;
+  font-size: var(--font-scale-small);
+  transition: var(--transition);
+}
+
+input::placeholder {
+  color: #2a334db0;
+}
+
+button {
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.container .informations {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 200px;
+}
+
+.informations .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.buttons button {
+  background: transparent;
+}
+
+.buttons button:hover {
+  filter: brightness(1.7);
+}
+
+.buttons button:active {
+  filter: brightness(.3);
+}
+
+.informations .message {
+  display: none;
+  width: 100%;
+  padding-right: 118px;
+}
+
+.message .message-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.message-box img, .message-box p {
+  position: absolute;
+  color: var(--white-color);
+  font-size: var(--font-scale-p);
+  text-align: center;
+}
+
+.message-box p {
+  margin-top: 22px;
+}

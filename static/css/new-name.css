@@ -1,0 +1,46 @@
+.container .new-name-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 522px;
+  margin-bottom: 16px;
+}
+
+.new-name-box input {
+  width: 90%;
+  border-radius: 8px 0 0 8px;
+}
+
+.new-name-box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  padding: 16px 16px 16px 0;
+  background: #2a334d20;
+  border-radius: 0 8px 8px 0;
+}
+
+.new-name-box .alert {
+  display: none;
+  margin-left: 8px;
+  padding: 16px;
+  color: var(--white-color);
+  background: var(--secondary-color);
+  border-radius: 8px;
+  font-size: var(--font-scale-small);
+}
+
+.container form {
+  width: 100%;
+  max-width: 522px;
+  margin-bottom: 32px;
+}
+
+form button {
+  width: 100%;
+  border-radius: 8px;
+}
